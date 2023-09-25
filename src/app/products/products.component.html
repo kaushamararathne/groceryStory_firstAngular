@@ -25,6 +25,10 @@
                 <td>{{product.unitPrice}}</td>
                 <td>{{product.quantity}}</td>
                 <td>
+                    <p *ngIf = "product.quantity <= 50">lower inventory</p>
+                    <p *ngIf = "product.quantity > 50">sufficinent inventory</p>
+                </td>
+                <td>
                     <i class="fa fa-eye icon"></i>
                     <i class="fa fa-pencil-square-o icon"></i>
                 </td>
